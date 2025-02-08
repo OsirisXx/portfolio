@@ -1,0 +1,117 @@
+.projects-container {
+  width: 100%;
+  height: 625px;
+  display: flex;
+  gap: 2rem;
+  position: relative;
+  margin-top: 2rem;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease;
+}
+
+.projects-container.slide-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.swiper {
+  width: 90%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.swiper .swiper-slide {
+  background-position: center;
+  background-size: cover;
+  min-width: 400px !important;
+  width: 150px;
+  height: 500px;
+}
+
+.projects-gallery {
+  width: 60%;
+  position: relative;
+}
+
+.project-info {
+  width: 40%;
+  padding: 2rem;
+  opacity: 0;
+  transform: translateX(100px);
+  transition: all 0.5s ease;
+}
+
+.project-info.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.project-info-title {
+  color: #ffffff;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.project-info-description {
+  color: #e6ccff;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.project-info-tech {
+  color: #ccb3ff;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.project-card {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  background: rgba(26, 0, 51, 0.98);
+  box-shadow: 0 10px 30px rgba(138, 43, 226, 0.4);
+  position: relative;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+.project-card::before {
+  content: '';
+  position: absolute;
+  top: -2px; right: -2px; bottom: -2px; left: -2px;
+  background: linear-gradient(45deg, #8A2BE2, #9370DB, #8A2BE2);
+  border-radius: 17px;
+  z-index: -1;
+  animation: borderGlow 3s ease infinite;
+}
+
+.project-image {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-bottom: 3px solid rgba(138, 43, 226, 0.3);
+}
+
+@keyframes borderGlow {
+  0% { opacity: 0.5; }
+  50% { opacity: 1; }
+  100% { opacity: 0.5; }
+}
+
+.swiper-slide-active .project-card::before {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .projects-container {
+    width: 100%;
+    margin-left: 0;
+    flex-direction: column;
+  }
+
+  .projects-gallery, .project-info {
+    width: 100%;
+  }
+}

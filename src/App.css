@@ -1,0 +1,33 @@
+.App {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  scroll-padding-top: 80px;
+  position: relative;
+}
+
+section {
+  min-height: 100vh;
+  width: 100%;
+  padding: 80px 40px;
+  z-index: 1;
+  position: relative;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+  display: inline-block;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60%;
+  height: 3px;
+  background: #8A2BE2;
+}
