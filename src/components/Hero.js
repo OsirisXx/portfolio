@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+ 
 import './Hero.css';
 import useTypewriter from '../hooks/useTypewriter';
 import { useInView } from 'react-intersection-observer';

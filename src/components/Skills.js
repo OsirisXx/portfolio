@@ -1,4 +1,4 @@
-import React, { forwardRef, useRef } from 'react';
+import React, { forwardRef } from 'react';
 import './Skills.css';
 import { useInView } from 'react-intersection-observer';
 

@@ -1,4 +1,4 @@
-import React, { forwardRef, useEffect } from 'react';
+import React, { forwardRef } from 'react';
 import { useInView } from 'react-intersection-observer';
 import './Contact.css';
 import { FaFacebook, FaEnvelope } from 'react-icons/fa';
